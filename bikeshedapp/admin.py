@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Color
+from .models import Brand, Bike
 
-admin.site.register(Color)
+admin.site.register(Brand)
+admin.site.register(Bike)
