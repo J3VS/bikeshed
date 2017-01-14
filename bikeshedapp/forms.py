@@ -6,7 +6,7 @@ class AddBikeForm(ModelForm):
 
     class Meta:
         model = Bike
-        fields = '__all__'
+        exclude = ['created_by', 'created_date', 'image']
 
     def __init__(self, *args, **kwargs):
         super(AddBikeForm, self).__init__(*args, **kwargs)

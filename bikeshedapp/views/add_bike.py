@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from bikeshedapp.forms import AddBikeForm
 from bikeshedapp.models import Bike
+from django.contrib.auth.models import User
 import datetime
 
 def post_form_upload(request):
@@ -15,7 +16,8 @@ def post_form_upload(request):
             print "It is valid"
             bike = form.save(commit=False)
 
-            bike.created_by = request.user;
+            user = User.objects.get(username="test_user")
+            bike.created_by = user
             bike.created_date = datetime.datetime.now()
             bike.save()
             return HttpResponseRedirect(reverse('/', kwargs={'bike_id': bike.id}))
