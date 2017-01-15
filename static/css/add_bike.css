@@ -1,0 +1,57 @@
+.leftForm {
+  width: 400px;
+}
+
+.field {
+  float: left;
+  margin: 10px;
+}
+
+.dropDownField {
+  width: 100%;
+}
+
+.dropDownField > select {
+  width: 50%;
+}
+
+.fullRowInput {
+  width: 100%;
+}
+
+.fullRowInput > label {
+  width: 20%;
+}
+
+.fullRowInput > input {
+  width: 80%;
+}
+
+.modelField > label {
+  margin-right: 10px;
+}
+
+.priceSizeRow {
+  width: 100%;
+}
+
+.priceField {
+  widht: 75%;
+}
+
+.priceField > label {
+  margin-right: 7px;
+}
+
+.descriptionLabel {
+  width: 100%;
+}
+
+.descriptionField {
+  width: 100%;
+}
+
+.descriptionField > textarea {
+  width: 100%;
+  lines: 5;
+}
