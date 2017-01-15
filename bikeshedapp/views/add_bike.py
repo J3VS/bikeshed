@@ -2,6 +2,7 @@ from django.shortcuts import render
 from bikeshedapp.forms import AddBikeForm
 from bikeshedapp.models import Bike
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 import datetime
 
 def post_form_upload(request):
@@ -20,7 +21,7 @@ def post_form_upload(request):
             bike.created_by = user
             bike.created_date = datetime.datetime.now()
             bike.save()
-            return HttpResponseRedirect(reverse('/', kwargs={'bike_id': bike.id}))
+            return HttpResponseRedirect("/")
         else:
             print "It is not valid"
             print form.errors
