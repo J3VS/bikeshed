@@ -1,0 +1,57 @@
+.content_section {
+  width: 800px;
+  margin: auto;
+}
+
+.bikeImage {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.bike_info {
+  margin: 40px;
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.upper_info {
+  height: 300px;
+}
+
+.brand_info {
+  width: 120px;
+  height: 300px;
+  float: left;
+}
+
+.info_piece {
+  margin: 10px;
+}
+
+.brand_image {
+  width: 120px;
+  height: 120px;
+}
+
+.brand_name {
+  text-align: center;
+  width: 100%;
+  height:
+}
+
+.upper_info, .lower_info {
+  width: 100%;
+  float: left;
+}
+
+.headline {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.headline, .description {
+  float: left;
+  width: 100%;
+}

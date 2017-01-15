@@ -1,111 +1,48 @@
-{% comment %}
-   humanize: For the "apnumber" filter, to display "two" instead of
-   "2". Requries 'django.contrib.humanize' in INSTALLED_APPS
-{% endcomment %}
-{% load humanize %}
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>BikeShed</title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width"/>
-      <style type="text/css">
-      .leftForm {
-        width: 400px;
-      }
-      .field {
-        float: left;
-        margin: 10px;
-      }
-      .dropDownField {
-        width: 100%;
-      }
-      .dropDownField > select {
-        width: 50%;
-      }
-      .fullRowInput {
-        width: 100%;
-      }
-      .fullRowInput > label {
-        width: 20%;
-      }
-      .fullRowInput > input {
-        width: 80%;
-      }
-      .modelField > label {
-        margin-right: 10px;
-      }
-      .priceSizeRow {
-        width: 100%;
-      }
-      .priceField {
-        widht: 75%;
-      }
-      .priceField > label {
-        margin-right: 7px;
-      }
-      .descriptionLabel {
-        width: 100%;
-      }
-      .descriptionField {
-        width: 100%;
-      }
-      .descriptionField > textarea {
-        width: 100%;
-        lines: 5;
-      }
-      </style>
-   </head>
-<body>
-   <div class="content_section">
-      <h1>Add Bike</h1>
-      <form action="" method="post">
-          {% csrf_token %}
-          {{ form.non_field_errors }}
-          <div class="leftForm">
-            <div class="field dropDownField brandField">
-              {{ form.brand.errors }}
-              {{ form.brand }}
-            </div>
-            <div class="field fullRowInput modelField">
-                {{ form.model.errors }}
-                {{ form.model.label_tag }}
-                {{ form.model }}
-            </div>
-            <div class="priceSizeRow">
-              <div class="field priceField">
-                  {{ form.price.errors }}
-                  {{ form.price.label_tag }}
-                  {{ form.price }}
-              </div>
-              <div class="field sizeField">
-                  {{ form.size.errors }}
-                  {{ form.size.label_tag }}
-                  {{ form.size }}
-              </div>
-            </div>
-            <div class="field dropDownField typeField">
-              {{ form.type.errors }}
-              {{ form.type }}
-            </div>
-            <div class="field fullRowInput headlineField">
-              {{ form.headline.errors }}
-              {{ form.headline.label_tag }}
-              {{ form.headline }}
-            </div>
-            <div class="field descriptionLabel">
-              {{ form.description.label_tag }}
-            </div>
-            <div class="field descriptionField">
-              {{ form.description.errors }}
-              {{ form.description }}
-            </div>
+{% extends 'bikeshedapp/base_template.html' %}
+{% block content %}
+  <form action="" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="leftForm">
+        <div class="field dropDownField brandField">
+          {{ form.brand.errors }}
+          {{ form.brand }}
+        </div>
+        <div class="field fullRowInput modelField">
+            {{ form.model.errors }}
+            {{ form.model.label_tag }}
+            {{ form.model }}
+        </div>
+        <div class="priceSizeRow">
+          <div class="field priceField">
+              {{ form.price.errors }}
+              {{ form.price.label_tag }}
+              {{ form.price }}
+          </div>
+          <div class="field sizeField">
+              {{ form.size.errors }}
+              {{ form.size.label_tag }}
+              {{ form.size }}
           </div>
         </div>
-        <input type="submit" value="Add Bike" class="field addBikeButton"/>
-      </form>
-   </div>
-   <script language="javascript">
-      document.getElementById("search_text").focus();
-   </script>
-</body></html>
+        <div class="field dropDownField typeField">
+          {{ form.type.errors }}
+          {{ form.type }}
+        </div>
+        <div class="field fullRowInput headlineField">
+          {{ form.headline.errors }}
+          {{ form.headline.label_tag }}
+          {{ form.headline }}
+        </div>
+        <div class="field descriptionLabel">
+          {{ form.description.label_tag }}
+        </div>
+        <div class="field descriptionField">
+          {{ form.description.errors }}
+          {{ form.description }}
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Add Bike" class="field addBikeButton"/>
+  </form>
+{% endblock %}

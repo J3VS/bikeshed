@@ -1,0 +1,19 @@
+{% extends 'bikeshedapp/base_template.html' %}
+{% block content %}
+  <div class="upper_info">
+   <img class="bikeImage" src="https://i5.walmartimages.com/asr/4ece3a6d-b445-40b9-9cf4-74bb6d03333d_1.3a3adf02aa8a9f3541023fd008279b3c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"/>
+   <div class="bike_info">
+     <div class="info_piece">Model: {{ bike.model }}</div>
+     <div class="info_piece">Price: ${{ bike.price }}</div>
+     <div class="info_piece">Size: {{ bike.size }}</div>
+   </div>
+   <div class="brand_info">
+     <img src={{ bike.brand.logo }} class="brand_image" />
+     <div class="brand_name">{{ bike.brand.name }}</div>
+   </div>
+  </div>
+  <div class="lower_info">
+   <div class="headline">{{ bike.headline }}</div>
+   <div class="description">{{ bike.description }}</div>
+  </div>
+{% endblock %}
