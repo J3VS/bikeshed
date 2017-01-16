@@ -1,48 +1,57 @@
 {% extends 'bikeshedapp/base_template.html' %}
+{% block title %}Add Bike Page{% endblock %}
 {% block content %}
-  <form action="" method="post">
-      {% csrf_token %}
-      {{ form.non_field_errors }}
-      <div class="leftForm">
-        <div class="field dropDownField brandField">
-          {{ form.brand.errors }}
-          {{ form.brand }}
+  <form class="add_Bike_form" action="" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div class="left_form">
+      <div class="field dropDownField brandField">
+        {{ form.brand.errors }}
+        {{ form.brand }}
+      </div>
+      <div class="field fullRowInput modelField">
+          {{ form.model.errors }}
+          {{ form.model.label_tag }}
+          {{ form.model }}
+      </div>
+      <div class="priceSizeRow">
+        <div class="field priceField">
+            {{ form.price.errors }}
+            {{ form.price.label_tag }}
+            {{ form.price }}
         </div>
-        <div class="field fullRowInput modelField">
-            {{ form.model.errors }}
-            {{ form.model.label_tag }}
-            {{ form.model }}
-        </div>
-        <div class="priceSizeRow">
-          <div class="field priceField">
-              {{ form.price.errors }}
-              {{ form.price.label_tag }}
-              {{ form.price }}
-          </div>
-          <div class="field sizeField">
-              {{ form.size.errors }}
-              {{ form.size.label_tag }}
-              {{ form.size }}
-          </div>
-        </div>
-        <div class="field dropDownField typeField">
-          {{ form.type.errors }}
-          {{ form.type }}
-        </div>
-        <div class="field fullRowInput headlineField">
-          {{ form.headline.errors }}
-          {{ form.headline.label_tag }}
-          {{ form.headline }}
-        </div>
-        <div class="field descriptionLabel">
-          {{ form.description.label_tag }}
-        </div>
-        <div class="field descriptionField">
-          {{ form.description.errors }}
-          {{ form.description }}
+        <div class="field sizeField">
+            {{ form.size.errors }}
+            {{ form.size.label_tag }}
+            {{ form.size }}
         </div>
       </div>
+      <div class="field dropDownField typeField">
+        {{ form.type.errors }}
+        {{ form.type }}
+      </div>
+      <div class="field fullRowInput headlineField">
+        {{ form.headline.errors }}
+        {{ form.headline.label_tag }}
+        {{ form.headline }}
+      </div>
+      <div class="field descriptionLabel">
+        {{ form.description.label_tag }}
+      </div>
+      <div class="field descriptionField">
+        {{ form.description.errors }}
+        {{ form.description }}
+      </div>
     </div>
-    <input type="submit" value="Add Bike" class="field addBikeButton"/>
+    <div class="right_form">
+      <img class="field chosenImage" src="https://i5.walmartimages.com/asr/4ece3a6d-b445-40b9-9cf4-74bb6d03333d_1.3a3adf02aa8a9f3541023fd008279b3c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"/>
+      <div class="field imageField">
+        {{ form.image.errors }}
+        {{ form.image }}
+      </div>
+    </div>
+    <div class="submit_div">
+     <input type="submit" value="Add Bike" class="field addBikeButton"/>
+   </div>
   </form>
 {% endblock %}

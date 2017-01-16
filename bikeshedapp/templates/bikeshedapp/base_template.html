@@ -10,16 +10,20 @@
       <title>BikeShed</title>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="{% static 'js/app.js' %}"></script>
+      <link rel="stylesheet" href="{% static 'css/base_template.css' %}">
       <link rel="stylesheet" href="{% static 'css/bike_list.css' %}">
       <link rel="stylesheet" href="{% static 'css/bike_details.css' %}">
       <link rel="stylesheet" href="{% static 'css/add_bike.css' %}">
    </head>
 <body>
+  <div class="page_title">{% block title %}{% endblock %}</div>
+  <div class="nav_bar">
+    <div class="the_bikeshed">The Bikeshed</div>
+    <a class="add_bike_link">Add Bike</a>
+  </div>
    <div class="content">
-     <div class="page_title"></div>
-     <div class="nav_var">
-       <a>Add Bike</a>
-     </div>
      {% block content %}
      {% endblock %}
    </div>

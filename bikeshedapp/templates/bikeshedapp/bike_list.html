@@ -1,21 +1,9 @@
 {% extends 'bikeshedapp/base_template.html' %}
+{% block title %}Homepage{% endblock %}
 {% block content %}
-  <h1>Available Bikes</h1>
-
-  {% if  bikes.count == 0 %}
-     <p><i>There are no bikes in the database.</i></p>
-  {% else %}
-     <table>
-        <tr>
-           <th colspan="2">Bike</th>
-           <th>Price</th>
-        </tr>
-        {% for  bike in bikes %} {# No colon after "bikes" #}
-           <tr>
-              <td class="td__bike_name">{{ bike.name }}</td>
-              <td class="td__bike_price">{{ bike.price }}</td>
-           </tr>
-        {% endfor %}
-     </table>
-  {% endif %}
+  <div>
+    {% for bike in object_list %}
+       <div>{{ bike.model }}</div>
+    {% endfor %}
+  </div>
 {% endblock %}

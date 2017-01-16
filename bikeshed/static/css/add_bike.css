@@ -1,5 +1,11 @@
-.leftForm {
-  width: 400px;
+.add_Bike_form {
+  width: 100%;
+}
+
+.left_form, .right_form {
+  width: 50%;
+  height: 100%;
+  float: left;
 }
 
 .field {
@@ -52,6 +58,32 @@
 }
 
 .descriptionField > textarea {
-  width: 100%;
+  width: 95%;
   lines: 5;
+}
+
+.chosenImage {
+  width: 50%;
+  display: block;
+  margin: auto;
+  float: none;
+}
+
+.imageField {
+  float: none;
+}
+
+.imageField > input {
+  margin: auto;
+  float: none;
+  display: block;
+}
+
+.submit_div {
+  width: 100%;
+  float: left;
+}
+
+.addBikeButton {
+  margin-left: 50px;
 }

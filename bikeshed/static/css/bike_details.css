@@ -1,28 +1,27 @@
-.content_section {
-  width: 800px;
-  margin: auto;
+.upper_info {
+  height: 350px;
+  width: 100%;
 }
 
 .bikeImage {
-  width: 300px;
-  height: 300px;
+  width: 35%;
+  max-width: 350px;
+  float: left;
+}
+
+.bike_info_container {
+  width: 35%;
+  height: 100%;
   float: left;
 }
 
 .bike_info {
-  margin: 40px;
-  width: 300px;
-  height: 300px;
-  float: left;
-}
-
-.upper_info {
-  height: 300px;
+  padding: 80px;
 }
 
 .brand_info {
-  width: 120px;
-  height: 300px;
+  width: 30%;
+  height: 100%;
   float: left;
 }
 
@@ -33,6 +32,8 @@
 .brand_image {
   width: 120px;
   height: 120px;
+  display: block;
+  margin: auto;
 }
 
 .brand_name {
