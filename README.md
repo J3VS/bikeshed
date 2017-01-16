@@ -9,7 +9,7 @@ psql -f bikeshed_init.sql
 this creates the database, the user and assigns the user to the database.
 
 Then, to create the schema from Django's models:
-inside this repo (in a djangoenv running), run:
+inside this repo (with djangoenv running), run:
 
 ```shell
 python manage.py makemigrations
