@@ -62,13 +62,6 @@
   lines: 5;
 }
 
-.chosenImage {
-  width: 50%;
-  display: block;
-  margin: auto;
-  float: none;
-}
-
 .imageField {
   float: none;
 }
@@ -86,4 +79,11 @@
 
 .addBikeButton {
   margin-left: 50px;
+}
+
+#bikeImage {
+  float: none;
+  margin: auto;
+  display: block;
+
 }

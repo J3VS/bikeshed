@@ -47,6 +47,10 @@
   float: left;
 }
 
+.lower_info {
+  margin-top: 20px;
+}
+
 .headline {
   font-size: 30px;
   margin-bottom: 10px;

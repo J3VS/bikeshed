@@ -3,27 +3,28 @@ from bikeshedapp.forms import AddBikeForm
 from bikeshedapp.models import Bike
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
+from django.core.exceptions import ObjectDoesNotExist
 import datetime
 
 def post_form_upload(request):
     if request.method == 'GET':
         form = AddBikeForm()
     else:
-        # A POST request: Handle Form Upload
-        # Bind data from request.POST into a PostForm
-        form = AddBikeForm(request.POST)
-        # If data is valid, proceeds to create a new post and redirect the user
+        form = AddBikeForm(request.POST, request.FILES)
         if form.is_valid():
-            print "It is valid"
             bike = form.save(commit=False)
 
-            user = User.objects.get(username="test_user")
+            try:
+                user = User.objects.get(username="test_user")
+            except ObjectDoesNotExist:
+                user = User.objects.create_user('test_user')
+                user.save()
+
             bike.created_by = user
             bike.created_date = datetime.datetime.now()
             bike.save()
             return HttpResponseRedirect("/")
         else:
-            print "It is not valid"
             print form.errors
             print request.user
 
