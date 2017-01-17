@@ -5,3 +5,4 @@ from bikeshedapp.models        import Bike
 class BikeList(ListView, MultipleObjectMixin):
     template_name = "bikeshedapp/bike_list.html"
     model = Bike
+    paginate_by = 50
