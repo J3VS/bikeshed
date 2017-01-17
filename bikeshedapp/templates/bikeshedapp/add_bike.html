@@ -44,7 +44,11 @@
       </div>
     </div>
     <div class="right_form">
-      <img id="bikeImage" class="field chosenImage" src="media/None/no-img.png"/>
+      <div id="chosenImage"
+           class="field chosenImage"
+           style="background: url(None/no-img.png) no-repeat left center;
+                  background-size: 100% auto;
+                  background-repeat: no-repeat;"></div>
       <div class="field imageField">
         {{ form.image.errors }}
         {{ form.image }}

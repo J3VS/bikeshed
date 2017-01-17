@@ -2,7 +2,10 @@
 {% block title %}Bike Detail Page{% endblock %}
 {% block content %}
   <div class="upper_info">
-   <img class="bikeImage" src={{ bike.image.url }}/>
+   <div id="bikeImage"
+        class="bikeImage"
+        style="background: url({{ bike.image.url }}) no-repeat center;
+               background-size: 100% auto;"></div>
    <div class="bike_info_container">
     <div class="bike_info">
      <div class="info_piece">Model: {{ bike.model }}</div>
@@ -11,7 +14,9 @@
     </div>
    </div>
    <div class="brand_info">
-     <img src={{ bike.brand.logo }} class="brand_image" />
+     <div class="brand_image"
+          style="background: url({{ bike.brand.logo }}) no-repeat left center;
+                 background-size: 100% auto;"></div>
      <div class="brand_name">{{ bike.brand.name }}</div>
    </div>
   </div>

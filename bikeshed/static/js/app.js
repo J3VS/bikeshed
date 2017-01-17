@@ -1,16 +1,10 @@
-$('.bikeImage').height($('.bikeImage').width());
-$('.chosenImage').height($('.chosenImage').width());
-
 function readURL(input) {
   var file = ($("#id_image"))[0].files[0];
   if (file) {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-          $('#bikeImage')
-              .attr('src', e.target.result)
-              .width($('.chosenImage').width())
-              .height($('.chosenImage').height());
+        $('#chosenImage').css("background-image", "url(" + e.target.result + ")");
       };
 
       reader.readAsDataURL(file);

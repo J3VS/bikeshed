@@ -20,8 +20,10 @@
 <body>
   <div class="page_title">{% block title %}{% endblock %}</div>
   <div class="nav_bar">
-    <div class="the_bikeshed">The Bikeshed</div>
-    <a class="add_bike_link">Add Bike</a>
+    <a class="the_bikeshed a_link" href="/">The Bikeshed</a>
+    {% if request.path != '/add_bike' %}
+      <a class="add_bike_link a_link" href="/add_bike">Add Bike</a>
+    {% endif %}
   </div>
    <div class="content">
      {% block content %}

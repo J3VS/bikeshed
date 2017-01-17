@@ -37,7 +37,7 @@ class Bike(models.Model):
     model = models.CharField(max_length=255)
     headline = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-    image = models.ImageField(upload_to="uploads/", blank=True, default='None/no-img.png')
+    image = models.ImageField(upload_to="uploads/", default='None/no-img.png')
     size = IntegerRangeField(min_value=12, max_value=30)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 

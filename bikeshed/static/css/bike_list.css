@@ -1,0 +1,26 @@
+.bikeTile {
+  width: 200px;
+  float: left;
+  margin: 20px;
+  box-shadow: 2px 2px 5px;
+  padding: 5px;
+}
+
+.bikeTileImage {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+.modelName {
+  text-align: center;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  text-align: center;
+  font-size: 12px;
+}

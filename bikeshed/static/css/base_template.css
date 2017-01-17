@@ -31,7 +31,6 @@ html {
   line-height: 50px;
   float: right;
   margin-right: 20px;
-  text-decoration: none;
 }
 
 .content {
@@ -39,4 +38,9 @@ html {
   width: 100%;
   max-width: 1000px;
   margin: auto;
+}
+
+.a_link {
+  text-decoration: none;
+  color: black;
 }
