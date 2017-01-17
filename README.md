@@ -29,3 +29,12 @@ python manage.py runserver
 ```
 
 and naviagte to the URL shown in the commandline.
+
+To add a superuser, in order to manage brands and bikes, run
+
+```shell
+python manage.py createsuperuser
+```
+
+and enter a username, email address and password, admin is found at
+host:port/admin.
