@@ -27,3 +27,4 @@ INSERT INTO bikeshedapp_bike VALUES (14, 'M', '2017-01-16 12:12:36.366495-05', '
 INSERT INTO bikeshedapp_bike VALUES (15, 'R', '2017-01-16 12:12:36.366495-05', 'NEMESIS 650 RACE BIKE 2014', 'Triple butted aluminum frame features a tapered head tube and responsive geometry', 'The triple-butted aluminum frame of the Jamis Nemesis Race bike is exceedingly light and responsive. With a tapered headtube, and oversized chainstays, it offers stability and control in a light and affordable package.', 'uploads/G0002CUU.jpg', 25, 1098.99, 5, 1);
 
 SELECT setval('bikeshedapp_bike_id_seq', (SELECT MAX(id) FROM bikeshedapp_bike)+1);
+SELECT setval('auth_user_id_seq', (SELECT MAX(id) FROM auth_user)+1);
