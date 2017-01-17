@@ -1,61 +1,61 @@
 {% extends 'bikeshedapp/base_template.html' %}
 {% block title %}Add Bike Page{% endblock %}
 {% block content %}
-  <form class="add_Bike_form" action="" method="post" enctype=multipart/form-data>
+  <form class="add-Bike-form" action="" method="post" enctype=multipart/form-data>
     {% csrf_token %}
     {{ form.non_field_errors }}
-    <div class="left_form">
-      <div class="field dropDownField brandField">
+    <div class="left-form">
+      <div class="field drop-down-field brand-field">
         {{ form.brand.errors }}
         {{ form.brand }}
       </div>
-      <div class="field fullRowInput modelField">
+      <div class="field full-row-input model-field">
           {{ form.model.errors }}
           {{ form.model.label_tag }}
           {{ form.model }}
       </div>
-      <div class="priceSizeRow">
-        <div class="field priceField">
+      <div class="price-size-row">
+        <div class="field price-field">
             {{ form.price.errors }}
             {{ form.price.label_tag }}
             {{ form.price }}
         </div>
-        <div class="field sizeField">
+        <div class="field size-field">
             {{ form.size.errors }}
             {{ form.size.label_tag }}
             {{ form.size }}
         </div>
       </div>
-      <div class="field dropDownField typeField">
+      <div class="field drop-down-field type-field">
         {{ form.type.errors }}
         {{ form.type }}
       </div>
-      <div class="field fullRowInput headlineField">
+      <div class="field full-row-input headline-field">
         {{ form.headline.errors }}
         {{ form.headline.label_tag }}
         {{ form.headline }}
       </div>
-      <div class="field descriptionLabel">
+      <div class="field description-label">
         {{ form.description.label_tag }}
       </div>
-      <div class="field descriptionField">
+      <div class="field description-field">
         {{ form.description.errors }}
         {{ form.description }}
       </div>
     </div>
-    <div class="right_form">
-      <div id="chosenImage"
-           class="field chosenImage"
+    <div class="right-form">
+      <div id="chosen-image"
+           class="field chosen-image"
            style="background: url(None/no-img.png) no-repeat left center;
                   background-size: 100% auto;
                   background-repeat: no-repeat;"></div>
-      <div class="field imageField">
+      <div class="field image-field">
         {{ form.image.errors }}
         {{ form.image }}
       </div>
     </div>
-    <div class="submit_div">
-     <input type="submit" value="Add Bike" class="field addBikeButton"/>
+    <div class="submit-div">
+     <input type="submit" value="Add Bike" class="field add-bike-button"/>
    </div>
   </form>
 {% endblock %}

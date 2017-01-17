@@ -1,8 +1,8 @@
-.add_Bike_form {
+.add-Bike-form {
   width: 100%;
 }
 
-.left_form, .right_form {
+.left-form, .right-form {
   width: 50%;
   height: 100%;
   float: left;
@@ -13,75 +13,76 @@
   margin: 10px;
 }
 
-.dropDownField {
+.drop-down-field {
   width: 100%;
 }
 
-.dropDownField > select {
+.drop-down-field > select {
   width: 50%;
 }
 
-.fullRowInput {
+.full-row-input {
   width: 100%;
 }
 
-.fullRowInput > label {
+.full-row-input > label {
   width: 20%;
 }
 
-.fullRowInput > input {
+.full-row-input > input {
   width: 80%;
 }
 
-.modelField > label {
+.model-field > label {
   margin-right: 10px;
 }
 
-.priceSizeRow {
+.price-size-row {
   width: 100%;
 }
 
-.priceField {
+.price-field {
   widht: 75%;
 }
 
-.priceField > label {
+.price-field > label {
   margin-right: 7px;
 }
 
-.descriptionLabel {
+.description-label {
   width: 100%;
 }
 
-.descriptionField {
+.description-field {
   width: 100%;
 }
 
-.descriptionField > textarea {
+.description-field > textarea {
   width: 95%;
   lines: 5;
 }
 
-.imageField {
+.image-field {
   float: none;
+  margin-left: 50px;
 }
 
-.imageField > input {
+.image-field > input {
   margin: auto;
   float: none;
   display: block;
 }
 
-.submit_div {
+.submit-div {
   width: 100%;
   float: left;
 }
 
-.addBikeButton {
+.add-bike-button {
   margin-left: 50px;
 }
 
-#chosenImage {
+#chosen-image {
   float: none;
   margin: auto;
   display: block;

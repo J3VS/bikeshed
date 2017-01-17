@@ -4,7 +4,7 @@ function readURL(input) {
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        $('#chosenImage').css("background-image", "url(" + e.target.result + ")");
+        $('#chosen-image').css("background-image", "url(" + e.target.result + ")");
       };
 
       reader.readAsDataURL(file);

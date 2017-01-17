@@ -6,13 +6,22 @@ html {
   margin: 0px;
 }
 
-.page_title {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, .pointer {
+  cursor:pointer;
+}
+
+.page-title {
   height: 50px;
   font-size: 40px;
   margin: 20px 5px;
 }
 
-.nav_bar {
+.nav-bar {
   height: 50px;
   background: #aaaaaa;
   border-top: 1px solid black;
@@ -20,14 +29,14 @@ html {
   width: 100%;
 }
 
-.the_bikeshed {
+.the-bikeshed {
   line-height: 50px;
   float: left;
   margin-left: 20px;
   font-size: 30px;
 }
 
-.add_bike_link {
+.add-bike-link {
   line-height: 50px;
   float: right;
   margin-right: 20px;
@@ -38,9 +47,4 @@ html {
   width: 100%;
   max-width: 1000px;
   margin: auto;
-}
-
-.a_link {
-  text-decoration: none;
-  color: black;
 }

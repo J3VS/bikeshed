@@ -1,26 +1,26 @@
 {% extends 'bikeshedapp/base_template.html' %}
 {% block title %}Bike Detail Page{% endblock %}
 {% block content %}
-  <div class="upper_info">
-   <div id="bikeImage"
-        class="bikeImage"
+  <div class="upper-info">
+   <div id="bike-image"
+        class="bike-image"
         style="background: url({{ bike.image.url }}) no-repeat center;
                background-size: 100% auto;"></div>
-   <div class="bike_info_container">
-    <div class="bike_info">
-     <div class="info_piece">Model: {{ bike.model }}</div>
-     <div class="info_piece">Price: ${{ bike.price }}</div>
-     <div class="info_piece">Size: {{ bike.size }}</div>
+   <div class="bike-info-container">
+    <div class="bike-info">
+     <div class="info-piece">{{ bike.model }}</div>
+     <div class="info-piece">${{ bike.price }}</div>
+     <div class="info-piece">{{ bike.size }}</div>
     </div>
    </div>
-   <div class="brand_info">
-     <div class="brand_image"
+   <div class="brand-info">
+     <div class="brand-image"
           style="background: url({{ bike.brand.logo }}) no-repeat left center;
                  background-size: 100% auto;"></div>
-     <div class="brand_name">{{ bike.brand.name }}</div>
+     <div class="brand-name">{{ bike.brand.name }}</div>
    </div>
   </div>
-  <div class="lower_info">
+  <div class="lower-info">
    <div class="headline">{{ bike.headline }}</div>
    <div class="description">{{ bike.description }}</div>
   </div>

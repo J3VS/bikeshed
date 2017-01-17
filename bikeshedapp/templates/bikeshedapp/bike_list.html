@@ -3,12 +3,12 @@
 {% block content %}
   <div>
     {% for bike in object_list %}
-       <div class="bikeTile" onclick="location.href='/bike_details/{{ bike.id }}'">
-         <div class="bikeTileImage"
+       <div class="bike-tile pointer" onclick="location.href='/bike_details/{{ bike.id }}'">
+         <div class="bike-tile-image"
               style="background: url({{ bike.image.url }}) no-repeat center top;
                      background-size: contain;">
          </div>
-         <div class="modelName">{{ bike.model }}</div>
+         <div class="model">{{ bike.model }}</div>
          <div class="price">{{ bike.price }}</div>
        </div>
     {% endfor %}

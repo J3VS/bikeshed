@@ -1,52 +1,52 @@
-.upper_info {
+.upper-info {
   width: 100%;
 }
 
-.bikeImage {
+.bike-image {
   width: 35%;
   max-width: 350px;
   float: left;
   height: 350px;
 }
 
-.bike_info_container {
+.bike-info-container {
   width: 35%;
   height: 100%;
   float: left;
 }
 
-.bike_info {
-  padding: 80px;
+.bike-info {
+  padding-top: 50px;
 }
 
-.brand_info {
+.brand-info {
   width: 30%;
   height: 100%;
   float: left;
 }
 
-.info_piece {
+.info-piece {
   margin: 10px;
 }
 
-.brand_image {
+.brand-image {
   width: 50%;
   height: 150px;
   margin: auto;
 }
 
-.brand_name {
+.brand-name {
   text-align: center;
   width: 100%;
   height:
 }
 
-.upper_info, .lower_info {
+.upper-info, .lower-info {
   width: 100%;
   float: left;
 }
 
-.lower_info {
+.lower-info {
   margin-top: 20px;
 }
 
