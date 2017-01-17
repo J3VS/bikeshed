@@ -101,5 +101,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'bikeshed/static'),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/'
+MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = ( os.path.join(BASE_DIR, 'bikeshed/media'),)
