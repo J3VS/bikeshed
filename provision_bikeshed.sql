@@ -4,7 +4,11 @@ INSERT INTO bikeshedapp_brand VALUES (3, 'Colnago', 'https://seeklogo.com/images
 INSERT INTO bikeshedapp_brand VALUES (4, 'Parlee', 'http://veloswap.competitor.com/files/2014/10/Parlee-Logo.jpg');
 INSERT INTO bikeshedapp_brand VALUES (5, 'Jamis', 'https://cyclesoflifepb.files.wordpress.com/2011/10/jamis-logo1.jpg');
 
+SELECT setval('bikeshedapp_brand_id_seq', (SELECT MAX(id) FROM bikeshedapp_brand)+1);
+
 INSERT INTO auth_user VALUES (1, 'test_user', '2017-01-16 12:12:36.366495-05', true, 'test_user', 'test', 'user', 'test@user.com', true, true, '2017-01-16 12:12:36.366495-05');
+
+SELECT setval('auth_user_id_seq', (SELECT MAX(id) FROM auth_user)+1);
 
 INSERT INTO bikeshedapp_bike VALUES (1, 'H', '2017-01-16 12:12:36.366495-05', 'Quick Speed 3 Bike', 'Flat handlebar and upright riding position allow good visibility while riding', 'Designed for everyday riding and longer weekend excursions, the Quick Speed 3 bike combines a comfort-oriented geometry with lightweight materials to deliver both comfort and speed.', 'uploads/cannondale_quick_speed_3.jpeg', 25, 799.99, 1, 1);
 INSERT INTO bikeshedapp_bike VALUES (2, 'M', '2017-01-16 12:12:36.366495-05', 'CAAD12 Disc 105 5 Bike', 'This bike is for aspiring racers', 'Think you know aluminum? Think again. Incomparably light, explosively stiff and impossibly smooth, the CAAD12 Disc 105 redefines performance with the finest alloy racing bike ever made by Cannondale.', 'uploads/CAAD12.jpeg', 25, 1849.00, 1, 1);
@@ -27,4 +31,3 @@ INSERT INTO bikeshedapp_bike VALUES (14, 'M', '2017-01-16 12:12:36.366495-05', '
 INSERT INTO bikeshedapp_bike VALUES (15, 'R', '2017-01-16 12:12:36.366495-05', 'NEMESIS 650 RACE BIKE 2014', 'Triple butted aluminum frame features a tapered head tube and responsive geometry', 'The triple-butted aluminum frame of the Jamis Nemesis Race bike is exceedingly light and responsive. With a tapered headtube, and oversized chainstays, it offers stability and control in a light and affordable package.', 'uploads/G0002CUU.jpg', 25, 1098.99, 5, 1);
 
 SELECT setval('bikeshedapp_bike_id_seq', (SELECT MAX(id) FROM bikeshedapp_bike)+1);
-SELECT setval('auth_user_id_seq', (SELECT MAX(id) FROM auth_user)+1);
